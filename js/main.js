@@ -110,20 +110,26 @@ nextBtn.addEventListener("click", nextStep);
 backBtn.addEventListener("click", backStep);
 
 function nextStep(e) {
-
-  if (!formChecker()) {
-    return
+  
+  if (currentStep == 0 || currentStep ==1) {
+    if(!formChecker()){
+      return 0;
+    }
+    
   }
 
-  if (nextBtn.classList.contains("done")) {
-    e.preventDefault()
-    setTimeout((
-    checkoutForm.submit()
-    ), 2000)
+  if (e.target.classList.contains("done")) {
+    console.log("submit")
+   
+    setTimeout(() => {
+      checkoutForm.submit()
+    }, 2500);
+   
     checkoutForm.classList.add("d-none");
     thankStep.classList.remove("d-none");
   }
   else {
+
     currentStep++;
     updateStep();
   }
@@ -256,6 +262,7 @@ function addons(check) {
   summaryAddonDiv.append(addonDiv);
 }
 function removeAddon(id) {
+
   document.getElementById(id).remove();
 
   let [, name] = id.split("-");
