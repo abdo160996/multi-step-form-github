@@ -118,8 +118,8 @@ function nextStep(e) {
     
   }
 
-  if (e.target.classList.contains("done")) {
-    console.log("submit")
+  if (nextBtn.classList.contains("done")) {
+ 
    
     setTimeout(() => {
       checkoutForm.submit()
