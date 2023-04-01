@@ -100,9 +100,11 @@ function updateStep() {
     nextBtn.innerHTML = "Confirm";
     totalCalc();
     nextBtn.classList.add("done");
+    nextBtn.type = "submit"
   } else {
     nextBtn.innerHTML = "Next";
     nextBtn.classList.remove("done");
+    nextBtn.type = "button"
   }
 }
 
@@ -110,26 +112,20 @@ nextBtn.addEventListener("click", nextStep);
 backBtn.addEventListener("click", backStep);
 
 function nextStep(e) {
-  
-  if (currentStep == 0 || currentStep ==1) {
-    if(!formChecker()){
+
+  if (currentStep == 0 || currentStep == 1) {
+    if (!formChecker()) {
       return 0;
     }
-    
   }
-
   if (nextBtn.classList.contains("done")) {
- 
-   
-    setTimeout(() => {
-      checkoutForm.submit()
-    }, 2500);
-   
+    checkoutForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+    })
     checkoutForm.classList.add("d-none");
     thankStep.classList.remove("d-none");
   }
   else {
-
     currentStep++;
     updateStep();
   }
@@ -205,7 +201,7 @@ function addPlan(btnValue) {
 
 // choose add-on services
 function chooseAddons() {
-  
+
   addonChecks.forEach((check) => {
     check.addEventListener("click", function () {
       if (check.checked) {
@@ -217,20 +213,20 @@ function chooseAddons() {
       }
     });
   });
-//   addonss.forEach((addon) => {
-//   addon.addEventListener("click", function () {
-//     const addonChecked = addon.querySelector(".form-check-input");
-//     if (addonChecked.checked) {
-//       addonChecked.checked = false;
-//       this.classList.remove("checkAddon");
-//       removeAddon(addonChecked.value);
-//     } else {
-//       addonChecked.checked = true;
-//       this.classList.add("checkAddon");
-//       addons(addonChecked);
-//     }
-//   });
-// });
+  //   addonss.forEach((addon) => {
+  //   addon.addEventListener("click", function () {
+  //     const addonChecked = addon.querySelector(".form-check-input");
+  //     if (addonChecked.checked) {
+  //       addonChecked.checked = false;
+  //       this.classList.remove("checkAddon");
+  //       removeAddon(addonChecked.value);
+  //     } else {
+  //       addonChecked.checked = true;
+  //       this.classList.add("checkAddon");
+  //       addons(addonChecked);
+  //     }
+  //   });
+  // });
 }
 
 //add Addons to summary
