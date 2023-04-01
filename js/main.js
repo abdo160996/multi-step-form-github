@@ -121,6 +121,7 @@ function nextStep(e) {
   if (nextBtn.classList.contains("done")) {
     nextBtn.type = "submit"
     checkoutForm.addEventListener('submit', (e) => {
+     
       e.preventDefault()
     })
     checkoutForm.classList.add("d-none");
