@@ -117,9 +117,9 @@ function nextStep(e) {
   if (nextBtn.classList.contains("done")) {
     console.log(currentStep)
     // e.preventDefault()
-    // setTimeout((
-    // checkoutForm.submit()
-    // ), 2000)
+    setTimeout((
+    checkoutForm.submit()
+    ), 2000)
     checkoutForm.classList.add("d-none");
     thankStep.classList.remove("d-none");
   }
