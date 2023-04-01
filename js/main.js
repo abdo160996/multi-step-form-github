@@ -114,8 +114,8 @@ function nextStep(e) {
   if (!formChecker()) {
     return
   }
+
   if (nextBtn.classList.contains("done")) {
-  
     e.preventDefault()
     setTimeout((
     checkoutForm.submit()
