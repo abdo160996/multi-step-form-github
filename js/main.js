@@ -100,11 +100,11 @@ function updateStep() {
     nextBtn.innerHTML = "Confirm";
     totalCalc();
     nextBtn.classList.add("done");
-    nextBtn.type = "submit"
+    
   } else {
     nextBtn.innerHTML = "Next";
     nextBtn.classList.remove("done");
-    nextBtn.type = "button"
+   
   }
 }
 
@@ -119,6 +119,7 @@ function nextStep(e) {
     }
   }
   if (nextBtn.classList.contains("done")) {
+    nextBtn.type = "submit"
     checkoutForm.addEventListener('submit', (e) => {
       e.preventDefault()
     })
