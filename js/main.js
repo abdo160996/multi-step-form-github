@@ -121,9 +121,9 @@ function nextStep(e) {
   if (e.target.classList.contains("done")) {
     console.log("submit")
    
-    setTimeout(() => {
-      checkoutForm.submit()
-    }, 2500);
+//     setTimeout(() => {
+//       checkoutForm.submit()
+//     }, 2500);
    
     checkoutForm.classList.add("d-none");
     thankStep.classList.remove("d-none");
