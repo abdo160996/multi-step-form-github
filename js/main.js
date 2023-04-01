@@ -269,7 +269,6 @@ function removeAddon(id) {
 }
 
 function totalCalc() {
-  console.log(addonPlanPrices);
 
   const totalSummary = document.querySelector(".summary-step");
   const totalDiv = document.createElement("div");
