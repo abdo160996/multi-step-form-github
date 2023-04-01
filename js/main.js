@@ -115,8 +115,8 @@ function nextStep(e) {
     return
   }
   if (nextBtn.classList.contains("done")) {
-    console.log(currentStep)
-    // e.preventDefault()
+  
+    e.preventDefault()
     setTimeout((
     checkoutForm.submit()
     ), 2000)
