@@ -1,0 +1,38 @@
+@use "../variables" as *; 
+
+label[for="darkmode"] {
+    position: absolute;
+    top: 2.6%;
+    right: 20%;
+    z-index: 1;
+  }
+  @media (min-width: 767px) {
+    .wrapper {
+      position: relative;
+    }
+    label[for="darkmode"] {
+      top: -35px;
+      right: -10px;
+    }
+  }
+  #darkmode {
+    opacity: 0;
+  }
+  
+  .theme-mode {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    transition: transform 1s;
+    border: 2px solid $marine-blue;
+    transform: rotate(180deg);
+    filter: grayscale(50%);
+  
+    &.dark-on {
+      border: 2px solid $magnolia;
+      background-color: $alabaster;
+  
+      transform: rotate(360deg);
+    }
+  }
+  

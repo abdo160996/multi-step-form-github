@@ -1,0 +1,52 @@
+
+@use "../variables" as *;
+
+@media (max-width: 767px) {
+  .center-box {
+    height: 100%;
+  }
+  .wrapper {
+    background-color: transparent;
+  }
+
+  aside {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  aside::before {
+    background: url("../assets/images/bg-sidebar-mobile.svg") no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .step {
+    background-color: $white;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    position: relative;
+    top: 20%;
+  }
+
+  form .next-step {
+    position: fixed;
+    margin-top: auto;
+    bottom: 0%;
+    height: 5rem;
+    background:$alabaster;
+    right: 0%;
+    left: 0%;
+    padding-inline: 15px;
+  }
+}

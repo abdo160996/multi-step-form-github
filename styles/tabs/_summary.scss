@@ -1,0 +1,41 @@
+@use "../variables" as *;
+
+// summary step 4
+.summary-step {
+  .summary {
+    background-color: $magnolia;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .plan-price{
+    color: $marine-blue;
+    font-weight: bold;
+  }
+  .plan-name{
+    color: $marine-blue;
+  }
+  .addon-name {
+    color: $cool-gray;
+  }
+  .addon-price {
+    color: $marine-blue;
+  }
+  hr {
+    width: 80%;
+    margin: auto;
+  }
+
+  .total .total-price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: $purplish-blue;
+  }
+  .total {
+    .total-dur{
+      color: $cool-gray;
+    }
+  }
+}

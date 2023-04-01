@@ -1,0 +1,30 @@
+// Primary colors
+$marine-blue: hsl(213, 96%, 18%);
+$purplish-blue: hsl(243, 100%, 62%);
+$alpha-blue :hsla(243.1, 100%, 62%, 0.33);
+$pastel-blue: hsl(228, 100%, 84%);
+$light-blue: hsl(206, 94%, 87%);
+$strawberry-red: hsl(354, 84%, 57%);
+$bg-body :#343A40;
+// Neutral colors
+$cool-gray: hsl(231, 11%, 63%);
+$light-gray: hsl(229, 24%, 87%);
+$magnolia: hsl(217, 100%, 97%);
+$alabaster: hsl(231, 100%, 99%);
+$white: hsl(0, 0%, 100%);
+
+// fonts
+@font-face {
+  font-family: "ub-rg";
+  src: url("../assets/fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ub-bd";
+  src: url("../assets/fonts/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+  font-family: "ub-md";
+  src: url("../assets/fonts/Ubuntu-Medium.ttf");
+}

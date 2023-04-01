@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "ub-rg";
+  src: url("../assets/fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: "ub-bd";
+  src: url("../assets/fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+  font-family: "ub-md";
+  src: url("../assets/fonts/Ubuntu-Medium.ttf");
+}
+*:focus {
+  box-shadow: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: hsl(217, 100%, 97%);
+  font-family: "ub-rg", sans-serif;
+}
+
+.center-box {
+  height: 100vh;
+}
+
+.wrapper {
+  background-color: hsl(0, 0%, 100%);
+  width: min(100% - 10px, 1000px);
+  border-radius: 20px;
+}
+
+.step header h1 {
+  font-family: "ub-bd", sans-serif;
+  color: hsl(213, 96%, 18%);
+}
+.step header p {
+  color: hsl(231, 11%, 63%);
+}
+.step .next-step button {
+  background-color: hsl(213, 96%, 18%);
+}
+
+.bad-feedback {
+  text-align: center;
+  font-weight: bold;
+  color: hsl(354, 84%, 57%);
+}
+
+.plan-step .plans .plan {
+  flex: 1 0 150px;
+  border: 1px solid hsl(229, 24%, 87%);
+  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+}
+.plan-step .plans .plan h5 {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .plan-step .plans .plan {
+    flex: 1 0 0;
+  }
+}
+.plan-step .plans .plan h6:nth-of-type(1) {
+  color: hsl(231, 11%, 63%);
+}
+.plan-step .plans .plan h6:nth-of-type(2) {
+  color: hsl(243, 100%, 62%);
+}
+.plan-step .plans .plan:hover {
+  border-color: hsl(213, 96%, 18%);
+}
+.plan-step .plans .plan.checked {
+  background-color: hsl(217, 100%, 97%);
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.plan-step .month-year {
+  background-color: hsl(217, 100%, 97%);
+}
+
+aside {
+  position: relative;
+  height: 568px;
+}
+aside .icon {
+  height: 2rem;
+  width: 2rem;
+  color: hsl(0, 0%, 100%);
+  background-color: transparent;
+}
+aside .icon.checked {
+  color: hsl(213, 96%, 18%);
+  background-color: hsl(217, 100%, 97%);
+}
+aside .text span:first-child {
+  color: hsl(228, 100%, 84%);
+}
+
+aside::before {
+  content: "";
+  background: url("../assets/images/bg-sidebar-desktop.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+aside .sidebar {
+  position: relative;
+}
+
+.addons-step .addon {
+  border: 1px solid hsl(229, 24%, 87%);
+  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+}
+.addons-step .addon.checkAddon {
+  background-color: hsl(217, 100%, 97%);
+  border: 1px solid hsl(243, 100%, 62%);
+  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+}
+.addons-step .addon p {
+  margin: 0;
+  font-size: 1em;
+}
+.addons-step .addon p:first-child {
+  font-family: "ub-md", sans-serif;
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+.addons-step .addon p:nth-child(2) {
+  color: hsl(231, 11%, 63%);
+}
+.addons-step .addon input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.addons-step .addon div {
+  color: hsl(243, 100%, 62%);
+}
+
+@media (max-width: 767px) {
+  .center-box {
+    height: 100%;
+  }
+  .wrapper {
+    background-color: transparent;
+  }
+  aside {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  aside::before {
+    background: url("../assets/images/bg-sidebar-mobile.svg") no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  .step {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    position: relative;
+    top: 20%;
+  }
+  form .next-step {
+    position: fixed;
+    margin-top: auto;
+    bottom: 0%;
+    height: 5rem;
+    background: hsl(231, 100%, 99%);
+    right: 0%;
+    left: 0%;
+    padding-inline: 15px;
+  }
+}
+.summary-step .summary {
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.summary-step .plan-price {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+.summary-step .plan-name {
+  color: hsl(213, 96%, 18%);
+}
+.summary-step .addon-name {
+  color: hsl(231, 11%, 63%);
+}
+.summary-step .addon-price {
+  color: hsl(213, 96%, 18%);
+}
+.summary-step hr {
+  width: 80%;
+  margin: auto;
+}
+.summary-step .total .total-price {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: hsl(243, 100%, 62%);
+}
+.summary-step .total .total-dur {
+  color: hsl(231, 11%, 63%);
+}
+
+label[for=darkmode] {
+  position: absolute;
+  top: 2.6%;
+  right: 20%;
+  z-index: 1;
+}
+
+@media (min-width: 767px) {
+  .wrapper {
+    position: relative;
+  }
+  label[for=darkmode] {
+    top: -35px;
+    right: -10px;
+  }
+}
+#darkmode {
+  opacity: 0;
+}
+
+.theme-mode {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  transition: transform 1s;
+  border: 2px solid hsl(213, 96%, 18%);
+  transform: rotate(180deg);
+  filter: grayscale(50%);
+}
+.theme-mode.dark-on {
+  border: 2px solid hsl(217, 100%, 97%);
+  background-color: hsl(231, 100%, 99%);
+  transform: rotate(360deg);
+}
+
+.dark-mode {
+  color: hsl(232, 17%, 83%);
+  background-color: #343A40;
+}
+.dark-mode .wrapper {
+  color: hsl(232, 17%, 83%);
+  background-color: #2b3035;
+}
+@media (max-width: 767px) {
+  .dark-mode .wrapper {
+    background-color: transparent;
+  }
+}
+.dark-mode aside::before {
+  filter: grayscale(60%);
+}
+.dark-mode .step header h1 {
+  color: hsl(231, 100%, 99%);
+}
+@media (max-width: 767px) {
+  .dark-mode .step {
+    background-color: #292d32;
+  }
+}
+.dark-mode input[class=form-control] {
+  background-color: #2f353a;
+  color: hsl(231, 100%, 99%);
+}
+.dark-mode input[class=form-control]::placeholder {
+  color: hsl(231, 100%, 99%);
+}
+.dark-mode .plan-step .month-year {
+  background-color: hsl(243, 100%, 62%);
+}
+.dark-mode .plan-step .plans .plan:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+.dark-mode .plan-step .plans .plan h5 {
+  color: hsl(217, 100%, 97%);
+}
+.dark-mode .plan-step .plans .plan h6:nth-of-type(2) {
+  color: hsl(231, 100%, 99%);
+}
+.dark-mode .plan-step .plans .plan {
+  border: 1px solid hsl(231, 11%, 63%);
+}
+.dark-mode .addons-step .addon.checkAddon {
+  background-color: #160aff;
+  border: 1px solid hsl(231, 11%, 63%);
+}
+.dark-mode .addons-step .addon p:first-child {
+  color: hsl(217, 100%, 97%);
+}
+.dark-mode .plan-step .plans .plan.checked {
+  background-color: #160aff;
+}
+.dark-mode .addons-step .addon div {
+  color: hsl(217, 100%, 97%);
+}
+.dark-mode .next-step {
+  background-color: #292d32;
+}
+.dark-mode .next-step #back {
+  color: hsl(243, 100%, 62%);
+}
+.dark-mode .summary-step .summary {
+  background-color: #292d32;
+}
+.dark-mode .summary-step .summary .plan-name {
+  color: hsl(231, 100%, 99%);
+}
+.dark-mode .summary-step .summary .plan-price,
+.dark-mode .summary-step .summary .addon-price {
+  color: hsl(243, 100%, 62%);
+}/*# sourceMappingURL=main.css.map */

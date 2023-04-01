@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <!-- Bootstrap css file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+    <!-- main style file -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <!-- main container start -->
+    <div class="center-box d-flex justify-content-center align-items-center">
+      <div class="wrapper p-4">
+        <label for="darkmode" class="">
+          <input type="checkbox" id="darkmode" />
+          <div class="theme-mode d-flex">
+            <img src="./assets/images/dark1.png" class="" alt="darkMode icon from flat icons" />
+          </div>
+        </label>
+        <div class="row gx-1">
+          <!-- Start Sidebar -->
+          <aside class="col-md-4">
+            <div class="sidebar p-5">
+              <div class="steps d-flex justify-content-center align-items-center mb-4">
+                <div class="icon d-flex justify-content-center align-items-center border border-2 rounded-circle me-2 checked">1</div>
+                <div class="text flex-grow-1 d-none d-md-block">
+                  <span class="d-block">Step 1</span>
+                  <span class="text-uppercase text-white fw-bold">Your Info</span>
+                </div>
+              </div>
+              <div class="steps d-flex justify-content-center align-items-center mb-4">
+                <div class="icon d-flex justify-content-center align-items-center border border-2 rounded-circle me-2">2</div>
+                <div class="text flex-grow-1 d-none d-md-block">
+                  <span class="d-block">Step 2</span>
+                  <span class="text-uppercase text-white fw-bold">Select plan</span>
+                </div>
+              </div>
+              <div class="steps d-flex justify-content-center align-items-center mb-4">
+                <div class="icon d-flex justify-content-center align-items-center border border-2 rounded-circle me-2">3</div>
+                <div class="text flex-grow-1 d-none d-md-block">
+                  <span class="d-block">Step 3</span>
+                  <span class="text-uppercase text-white fw-bold">Add-ons</span>
+                </div>
+              </div>
+              <div class="steps d-flex justify-content-center align-items-center mb-4">
+                <div class="icon d-flex justify-content-center align-items-center border border-2 rounded-circle me-2">4</div>
+                <div class="text flex-grow-1 d-none d-md-block">
+                  <span class="d-block">Step 4</span>
+                  <span class="text-uppercase text-white fw-bold">Summary</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <!-- End Sidebar -->
+          <form class="col-md-8 p-1 needs-validation" action="/" method="get" id="checkoutForm" novalidate>
+            <!-- Start profile step -->
+            <div class="step profile-step p-4 d-none">
+              <header>
+                <h1 class="">Profile Info</h1>
+                <p class="lead">Please provide your name, email address, and phone number.</p>
+              </header>
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" required id="name" name="username" min="3" placeholder="Your Name" />
+                <div class="invalid-feedback">Name is required! (at least 3 chars)</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" required id="email" name="email" placeholder="name@example.com" />
+                <div class="invalid-feedback">Valid Email is required!</div>
+              </div>
+
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" required id="phone" name="phone" placeholder="eg +1 256 565 8999" />
+                <div class="invalid-feedback">Phone is required!</div>
+               
+              </div>
+            </div>
+            <!-- End profile-step -->
+            <!-- Start plan step -->
+            <div class="step plan-step p-4 d-none">
+              <header>
+                <h1 class="">Select your plan</h1>
+                <p class="lead">You have the option of monthly or yearly billing.</p>
+              </header>
+              <div class="form-check plans d-flex gap-2 flex-column flex-md-row" id="month-plan">
+                
+                <label class="plan shadow-sm p-3 mb-2 mb-md-5 rounded d-flex d-md-block">
+                  
+                  <input type="radio" name="plan" id="arcade" class="form-check-input plan-type d-none" value="month-arcade" />
+                  <img src="./assets/images/icon-arcade.svg" class="me-2 me-md-0 mb-0 mb-md-5" alt="Arcade" />
+                  <div>
+                    <h5>Arcade</h5>
+                    <h6 class="m-y-on">$9/mo</h6>
+                  </div>
+                  
+                </label>
+                <label class="plan shadow-sm p-3 mb-2 mb-md-5 rounded d-flex d-md-block">
+                  <input type="radio" name="plan" id="advanced" class="form-check-input plan-type d-none" value="month-advanced" />
+                  <img src="./assets/images/icon-advanced.svg" class="me-2 me-md-0 mb-0 mb-md-5" alt="Advanced" />
+                  <div>
+                    <h5>Advanced</h5>
+                    <h6>$12/mo</h6>
+                  </div>
+                </label>
+                <label class="plan shadow-sm p-3 mb-2 mb-md-5 rounded d-flex d-md-block">
+                  <input type="radio" name="plan" id="pro" class="form-check-input plan-type d-none" value="month-pro" />
+                  <img src="./assets/images/icon-pro.svg" class="me-2 me-md-0 mb-0 mb-md-5" alt="Pro" />
+                  <div>
+                    <h5>Pro</h5>
+                    <h6>$20/mo</h6>
+                  </div>
+                  
+                </label>
+                
+              </div>
+              <div class="plans d-flex gap-2 flex-column flex-md-row d-none" id="year-plan">
+                <label class="plan shadow-sm p-3 mb-2 mb-md-5 rounded d-flex d-md-block">
+                  <input type="radio" name="plan" id="arcade" class="plan-type d-none" value="year-arcade" />
+                 
+                  <img src="./assets/images/icon-arcade.svg" class="w-25 me-3 me-md-0 mb-0 mb-md-5" alt="Arcade" />
+                  <div>
+                    <h5>Arcade</h5>
+                    <h6>$90/yr</h6>
+                    <h6>2 months free</h6>
+                  </div>
+                </label>
+                <label class="plan shadow-sm p-3 mb-2 mb-md-5 rounded d-flex d-md-block">
+                  <input type="radio" name="plan" id="advanced" class="plan-type d-none" value="year-advanced" />
+                  <img src="./assets/images/icon-advanced.svg" class="w-25 me-3 me-md-0 mb-0 mb-md-5" alt="Advanced" />
+                  <div>
+                    <h5>Advanced</h5>
+                    <h6>$120/yr</h6>
+                    <h6>2 months free</h6>
+                  </div>
+                </label>
+                <label class="plan shadow-sm p-3 mb-2 mb-md-5 rounded d-flex d-md-block">
+                  <input type="radio" name="plan" id="pro" class="plan-type d-none" value="year-pro" />
+                  <img src="./assets/images/icon-pro.svg" class="w-25 me-3 me-md-0 mb-0 mb-md-5" alt="Pro" />
+                  <div>
+                    <h5>Pro</h5>
+                    <h6>$150/yr</h6>
+                    <h6>2 months free</h6>
+                  </div>
+                </label>
+                
+              </div>
+              <div class="bad-feedback d-none">Please choose a plan.</div>
+              <div class="month-year mt-2 d-flex justify-content-center align-items-center rounded p-2">
+                <span class="fw-bold">Monthly</span>
+                <div class="form-check form-switch ms-2 me-2">
+                  <input class="form-check-input" type="checkbox" id="sub" />
+                  <label class="form-check-label" for="sub"></label>
+                </div>
+                <span class="fw-bold">Yearly</span>
+              </div>
+            </div>
+
+            <!-- End plan-step -->
+
+            <!-- Start addons step -->
+            <div class="step addons-step p-4">
+              <header>
+                <h1 class="">Pick add-on</h1>
+                <p class="lead">Add-ons help enhance your gaming experience.</p>
+              </header>
+              <div class="addons d-flex gap-2 flex-column" id="monthly-addons">
+                <div class="addon shadow-sm p-3 mb-2 mb-md-3 rounded d-flex align-items-center">
+                  <div class="me-4">
+                    <input class="form-check-input mt-0" type="checkbox" value="month-onlineService" name="addon" aria-label="Checkbox for following text input" />
+                  </div>
+                  <div>
+                    <p>Online service</p>
+                    <p>Access to multiplayer games</p>
+                  </div>
+                  <div class="ms-auto">+$1/mo</div>
+                </div>
+                <div class="addon shadow-sm p-3 mb-2 mb-md-3 rounded d-flex align-items-center">
+                  <div class="me-4">
+                    <input class="form-check-input mt-0" type="checkbox" value="month-largeStorage" name="addon" aria-label="Checkbox for following text input" />
+                  </div>
+                  <div>
+                    <p>Larger storage</p>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                  <div class="ms-auto">+$2/mo</div>
+                </div>
+                <div class="addon shadow-sm p-3 mb-2 mb-md-3 rounded d-flex align-items-center">
+                  <div class="me-4">
+                    <input class="form-check-input mt-0" type="checkbox" value="month-customProfile" name="addon" aria-label="Checkbox for following text input" />
+                  </div>
+                  <div>
+                    <p>Customizable Profile</p>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                  <div class="ms-auto">+$1/mo</div>
+                </div>
+              </div>
+              <div class="addons d-flex gap-2 flex-column d-none" id="yearly-addons">
+                <div class="addon shadow-sm p-3 mb-2 mb-md-3 rounded d-flex align-items-center">
+                  <div class="me-4">
+                    <input class="form-check-input mt-0" type="checkbox" value="year-onlineService" name="addon" aria-label="Checkbox for following text input" />
+                  </div>
+                  <div>
+                    <p>Online service</p>
+                    <p>Access to multiplayer games</p>
+                  </div>
+                  <div class="ms-auto">+$10/yr</div>
+                </div>
+                <div class="addon shadow-sm p-3 mb-2 mb-md-3 rounded d-flex align-items-center">
+                  <div class="me-4">
+                    <input class="form-check-input mt-0" type="checkbox" value="year-largeStorage" name="addon" aria-label="Checkbox for following text input" />
+                  </div>
+                  <div>
+                    <p>Larger storage</p>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                  <div class="ms-auto">+$20/yr</div>
+                </div>
+                <div class="addon shadow-sm p-3 mb-2 mb-md-3 rounded d-flex align-items-center">
+                  <div class="me-4">
+                    <input class="form-check-input mt-0" type="checkbox" value="year-customProfile" name="addon" aria-label="Checkbox for following text input" />
+                  </div>
+                  <div>
+                    <p>Customizable Profile</p>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                  <div class="ms-auto">+$20/yr</div>
+                </div>
+              </div>
+            </div>
+            <!-- End addon-step -->
+            <!-- Start summary step -->
+            <div class="step summary-step p-4 d-none">
+              <header>
+                <h1 class="">Finishing up</h1>
+                <p class="lead">Double-check everything looks OK before confirming.</p>
+              </header>
+              <div class="summary d-flex gap-2 flex-column">
+                <div class="plan p-3 mb-2 mb-md-3 d-flex align-items-center justify-content-between">
+                  <div class="d-flex flex-column">
+                    <span class="fw-bold plan-name"></span>
+                    <a href="#changePlan" id="changePlan">Change</a>
+                  </div>
+                  <div class="plan-price"></div>
+                </div>
+                <hr />
+              </div>
+            </div>
+            <!-- End summary-step -->
+            <div class="next-step mt-5 d-flex align-items-center">
+              <button type="button" id="back" class="fw-bold btn">Go Back</button>
+
+              <button type="button" id="next" class="btn btn-primary ms-auto">Next Step</button>
+            </div>
+          </form>
+          <!-- Start thanks step -->
+          <div class="thanks-step step d-flex align-items-center col-md-8 p-4 d-none">
+            <header class="d-flex flex-column align-items-center">
+              <img class="w-25 mb-4" src="./assets/images/icon-thank-you.svg" alt="" />
+
+              <h1 class="">Thank You</h1>
+              <p class="text-center lead">
+                Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.
+              </p>
+            </header>
+          </div>
+          <!-- End thanks-step -->
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Abdo</a>.
+    </div>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>

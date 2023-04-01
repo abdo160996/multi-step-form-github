@@ -1,0 +1,49 @@
+
+@use "./variables" as *;
+
+
+*:focus {
+  box-shadow: none !important;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $magnolia;
+  font-family: "ub-rg", sans-serif;
+}
+
+.center-box {
+  height: 100vh;
+
+}
+.wrapper {
+  background-color: $white;
+  width: min(100% - 10px, 1000px);
+  border-radius: 20px;
+ 
+}
+
+
+.step {
+  header h1 {
+    font-family: "ub-bd", sans-serif;
+    color: $marine-blue;
+  }
+  header p {
+    color: $cool-gray;
+  }
+
+  .next-step button {
+    background-color: $marine-blue;
+   
+  }
+}
+
+.bad-feedback {
+  text-align: center;
+  font-weight: bold;
+  color: $strawberry-red;
+ 
+}

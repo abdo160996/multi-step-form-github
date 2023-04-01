@@ -1,0 +1,6 @@
+@use "./tabs";
+@use "./mixins/theme";
+
+.dark-mode {
+  @include dark-mode;
+}

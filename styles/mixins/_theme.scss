@@ -1,0 +1,88 @@
+@use "../variables" as *;
+
+@mixin dark-mode {
+  color: hsl(232, 17%, 83%);
+  background-color: $bg-body;
+
+  .wrapper {
+    color: hsl(232, 17%, 83%);
+    background-color: #2b3035;
+    @media (max-width: 767px) {
+      & {
+        background-color: transparent;
+      }
+    }
+  }
+  aside::before {
+    filter: grayscale(60%);
+  }
+  .step header h1 {
+    color: $alabaster;
+  }
+
+  @media (max-width: 767px) {
+    .step {
+      background-color: darken($bg-body, 5%);
+    }
+  }
+
+  input[class="form-control"] {
+    background-color: darken($bg-body, 2%);
+    color: $alabaster;
+    &::placeholder {
+      color: $alabaster;
+    }
+  }
+
+  .plan-step .month-year {
+    background-color: $purplish-blue;
+  }
+
+  .plan-step .plans .plan:hover {
+    border-color: $purplish-blue;
+  }
+
+  .plan-step .plans .plan h5 {
+    color: $magnolia;
+  }
+  .plan-step .plans .plan h6:nth-of-type(2) {
+    color: $alabaster;
+  }
+
+  .plan-step .plans .plan {
+    border: 1px solid $cool-gray;
+  }
+
+  .addons-step .addon.checkAddon {
+    background-color:darken($purplish-blue,10%);
+    border: 1px solid $cool-gray;
+  }
+
+  .addons-step .addon p:first-child {
+    color: $magnolia;
+  }
+
+  .plan-step .plans .plan.checked {
+    background-color:darken($purplish-blue,10%);
+  }
+
+  .addons-step .addon div {
+    color: $magnolia;
+  }
+  .next-step {
+    background-color: darken($bg-body, 5%);
+  }
+  .next-step #back {
+    color: $purplish-blue;
+  }
+  .summary-step .summary {
+    background-color: darken($bg-body, 5%);
+    .plan-name {
+      color: $alabaster;
+    }
+    .plan-price,
+    .addon-price {
+      color: $purplish-blue;
+    }
+  }
+}
